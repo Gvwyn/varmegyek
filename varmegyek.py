@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # uzenet mindenkinek
 # a kod angolul van, mert nem tudok magyarul elnevezni dolgokat
 
-api_key = '0'
+api_key = ''
 
 pages = 158                         # number of pages as of 5/16/2024
 towns = 3179                        # total number of towns
@@ -51,7 +51,7 @@ def getTownsFromPage(url):
 def getTownDetails(location):
     postal_code = '0'
     if (location in towns_set): postal_code = towns_dict[location];
-    return postal_code, 0, 0 # uncomment this to run without api call
+    #return postal_code, 0, 0 # uncomment this to run without api call
     mapClient = googlemaps.Client(key=api_key)
     results = mapClient.places(location)
     if results['status'] == "OK":
@@ -69,7 +69,7 @@ parse = argparse.ArgumentParser();
 parse.add_argument('-api', dest='api_key', metavar='API_KEY', type=str, required=False, help='Google Maps API Key')
 args = parse.parse_args()
 
-# only use the arg API if it wasnt defined before
+# only use the passed argument API key if it wasnt defined before
 if api_key == '':
     api_key = args.api_key
     try:
@@ -77,9 +77,9 @@ if api_key == '':
     except googlemaps.exceptions.ApiError:
         raise SystemError('Invalid API Key.')
 
-# read postal codes file -> iranyito.txt
 start = time.time()
 
+# read postal codes file -> iranyito.txt
 towns_dict = {}
 print('"iranyito.txt" beolvasasa... ', end='')
 with open('iranyito.txt', 'r', encoding='utf-8') as file:
