@@ -69,7 +69,7 @@ A Google Maps API egy bizonyos kvótával rendelkezik, ami átlépése után dí
 
 ### Program futtatása
 
-``iranyito.txt`` és ``varmegyek.py`` 1 mappába kell legyen.  
+``iranyito.txt`` és ``varmegyek.py`` 1 mappába kell legyenek.  
 
 ```bash
 py varmegyek.py -api API_KEY
