@@ -1,4 +1,6 @@
-# Magyarország települései  
+<p align='center'> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Hungary.svg/1200px-Coat_of_arms_of_Hungary.svg.png" alt="Magyarország címere" style="height: 80px; width:42px;"/></p>
+
+# Magyarország települései
 
 *Ez a repo tartalmazza Magyarország összes települését, vármegyék szerint, illetve a forrásfájlt, amivel ezeket az adatokat le tudjátok kérni.*
 
@@ -12,6 +14,7 @@
 "Bősárkány": {
     "varmegye": "Győr-Moson-Sopron",
     "iranyitoszam": 9167,
+    "rang": "nagyközség",
     "hosszusag": 47.6881947,
     "szelesseg": 17.2507143
 },
@@ -23,20 +26,24 @@
 
 ```json
 "Pest": {
-    "Abony": { 
-        "hosszusag": 20.0095688,
-        "szelesseg": 47.18854
+    "Abony": {
+        "iranyitoszam": 2740,
+        "rang": "város",
+        "szelesseg": 47.18854,
+        "hosszusag": 20.0095688
     },
     "Acsa": {
-        "hosszusag": 19.3864356,
-        "szelesseg": 47.7946936
+        "iranyitoszam": 2683,
+        "rang": "község",
+        "szelesseg": 47.7946936,
+        "hosszusag": 19.3864356
     },
 },
 ``` 
 
 ---
 
-Emellett az adatok elérhetőek Excel formátumban is.
+Emellett az adatok elérhetőek **Excel** formátumban is a könnyű böngészés érdekében.
 
 ## Futtatás
 
@@ -77,14 +84,13 @@ Ez kettő fájlt fog legyártani, ezek példáit lásd [itt](#jelenlegi-adatok):
 Az Excel fájlt külön programmal csináltam, amit ez a kód nem tartalmaz.
 
 ## TODO
-- [ ] async API call-ok, jelenleg több mint 1 óra a lefutási ideje a programnak
-- [ ] több adat lekérése
+- [x] több adat lekérése
 - [ ] több adattároló típus alkalmazása -> Excel, SQL DB, stb.
-- [ ] error handling
 
 ### Felhasznált források
 [TÚRABÁZIS.hu](https://www.turabazis.hu/telepules_lista_0_0_n_n_n_n_0_n_0_n_0_n_n_n_n_0): települések és hozzájuk tartozó vármegyék nevei  
 [Google Maps Places API](https://developers.google.com/maps/documentation/places/web-service): földrajzi szélesség és hosszúság  
 Magyar Posta [Magyarországi postai irányítószámok](https://www.posta.hu/static/internet/download/Iranyitoszam-Internet_uj.xlsx) dokumentuma
+[Wikipédia](https://hu.wikipedia.org/wiki/Magyarorsz%C3%A1g_c%C3%ADmere): Magyarország címere kép
 
-[^1]: Az összes nyilvántartásban szereplő település neve, összesen 3179 db település.
+[^1]: Az összes nyilvántartásban szereplő település neve, összesen 3155 db település.

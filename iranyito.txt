@@ -6,6 +6,7 @@
 2015 Szigetmonostor
 2016 Leányfalu
 2017 Pócsmegyer
+2021 Tahitótfalu
 2023 Dunabogdány
 2024 Kisoroszi
 2025 Visegrád
@@ -57,6 +58,7 @@
 2118 Dány
 2119 Pécel
 2120 Dunakeszi
+2131 Göd
 2133 Sződliget
 2134 Sződ
 2135 Csörög
@@ -421,6 +423,7 @@
 3138 Ipolytarnóc
 3142 Mátraszele
 3143 Mátranovák
+3145 Mátraterenye
 3151 Rákóczibánya
 3152 Nemti
 3153 Dorogháza
@@ -992,6 +995,7 @@
 4273 Hajdúbagos
 4274 Hosszúpályi
 4275 Monostorpályi
+4281 Létavértes
 4284 Kokad
 4285 Álmosd
 4286 Bagamér
@@ -1045,6 +1049,7 @@
 4466 Timár
 4467 Szabolcs
 4468 Balsa
+4471 Gávavencsellő
 4474 Tiszabercel
 4475 Paszab
 4482 Kótaj
@@ -1295,6 +1300,7 @@
 5474 Tiszasas
 5475 Csépa
 5476 Szelevény
+5500 Gyomaendrőd
 5510 Dévaványa
 5515 Ecsegfalva
 5516 Körösladány
@@ -1501,6 +1507,7 @@
 6645 Felgyő
 6646 Tömörkény
 6647 Csanytelek
+6066 Tiszaalpár
 6700 Szeged
 6750 Algyő
 6754 Újszentiván
@@ -1726,6 +1733,7 @@
 7383 Baranyaszentgyörgy
 7383 Szágy
 7384 Baranyajenő
+7385 Gödre
 7391 Mindszentgodisa
 7391 Kisbeszterce
 7391 Kishajmás
@@ -2517,6 +2525,7 @@
 8747 Garabonc
 8747 Zalamerenye
 8749 Zalakaros
+8751 Zalakomár
 8753 Balatonmagyaród
 8754 Galambok
 8756 Nagyrécse
@@ -2840,6 +2849,7 @@
 9234 Kisbodak
 9235 Püski
 9235 Dunaremete
+9241 Jánossomorja
 9243 Várbalog
 9244 Újrónafő
 9245 Mosonszolnok
