@@ -1,4 +1,4 @@
-<p align='center'> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Hungary.svg/1200px-Coat_of_arms_of_Hungary.svg.png" alt="Magyarország címere" style="height: 210px; width:110px;"/></p>
+<p align='center'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Hungary.svg/1200px-Coat_of_arms_of_Hungary.svg.png" alt="Magyarország címere" style="height: 210px; width:110px;"/></p>
 
 # Magyarország települései
 
@@ -61,7 +61,7 @@ pip install requests googlemaps BeautifulSoup4
 
 - érvényes [Google Maps API](https://mapsplatform.google.com/) kulcs  
 
-### Figyelmeztetés
+### ⚠️ Figyelmeztetés ⚠️
 A Google Maps API egy bizonyos kvótával rendelkezik, ami átlépése után díjat számolnak fel.
 
 > *Google Maps Platform offers a $200 monthly credit for Maps, Routes, and Places (see Billing Account Credits). With the $200 monthly credit, some customers find their use cases are at no charge. You won't be charged until your usage exceeds $200 in a month.*
@@ -79,7 +79,7 @@ Ez kettő fájlt fog legyártani, ezek példáit lásd [itt](#jelenlegi-adatok):
 - ``varmegyek-raw.json``: az összes település neve, **minden lekért információval**.
 - ``varmegyek.json``: az előbb lekért települések **vármegyék szerint** csoportosítva.
 
-Az Excel fájlt külön programmal csináltam, amit ez a kód nem tartalmaz.
+Az Excel fájlt a program beépített JSON import funkciójával csináltam.
 
 ## TODO
 - [x] több adat lekérése
