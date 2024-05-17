@@ -92,4 +92,4 @@ Az Excel fájlt külön programmal csináltam, amit ez a kód nem tartalmaz.
 [Google Maps Places API](https://developers.google.com/maps/documentation/places/web-service): földrajzi szélesség és hosszúság  
 Magyar Posta [Magyarországi postai irányítószámok](https://www.posta.hu/static/internet/download/Iranyitoszam-Internet_uj.xlsx) dokumentuma
 
-[^1] Az összes nyilvántartásban szereplő település neve, összesen 3179 db település
+[^1]: Az összes nyilvántartásban szereplő település neve, összesen 3179 db település
