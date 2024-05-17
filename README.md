@@ -15,8 +15,8 @@
     "varmegye": "Győr-Moson-Sopron",
     "iranyitoszam": 9167,
     "rang": "nagyközség",
-    "hosszusag": 47.6881947,
     "szelesseg": 17.2507143
+    "hosszusag": 47.6881947,
 },
 ``` 
 
