@@ -1,4 +1,4 @@
-<p align='center'> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Hungary.svg/1200px-Coat_of_arms_of_Hungary.svg.png" alt="Magyarország címere" style="height: 80px; width:42px;"/></p>
+<p align='center'> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Coat_of_arms_of_Hungary.svg/1200px-Coat_of_arms_of_Hungary.svg.png" alt="Magyarország címere" style="height: 210px; width:110px;"/></p>
 
 # Magyarország települései
 
