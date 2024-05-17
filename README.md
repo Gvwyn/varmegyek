@@ -59,8 +59,6 @@ A Google Maps API egy bizonyos kvótával rendelkezik, ami átlépése után dí
 
 > *Google Maps Platform offers a $200 monthly credit for Maps, Routes, and Places (see Billing Account Credits). With the $200 monthly credit, some customers find their use cases are at no charge. You won't be charged until your usage exceeds $200 in a month.*
 
-Az [Usage and billing](https://developers.google.com/maps/documentation/places/web-service/usage-and-billing) szekció alapján a program 1 teljes lefutása kb. $20-25. Ennek tudatában futtassátok a programot.
-
 
 ### Program futtatása
 
