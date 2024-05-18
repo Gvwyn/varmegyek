@@ -1,3 +1,10 @@
+``v1.2.1``
+- további 4 település javítva (nem Magyarországi koordinátával rendelkeztek)
+
+``v1.2.0``
+- javítva 26 település
+- kisebb változtatások a kódban
+
 ``v1.1.0``
 - új info lekérve: "rang" (pl. "nagyközség", "város")
 - varmegyek.json: "rang" sor hozzáadva

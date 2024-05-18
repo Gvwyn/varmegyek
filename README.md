@@ -6,7 +6,7 @@
 
 *A városnevek[^1], illetve irányítószámok pontosak (kell legyenek), a koordináták ritkán, de eltérhetnek a valóságtól.*
 
-## Jelenlegi adatok
+## Fájlok
 
 ``varmegyek-raw.json``: összes adat lekérve  
 
@@ -69,23 +69,30 @@ A Google Maps API egy bizonyos kvótával rendelkezik, ami átlépése után dí
 
 ### Program futtatása
 
-A lefutási ideje jelenleg kb. 1 óra.
-
 ``iranyito.txt`` és ``varmegyek.py`` 1 mappába kell legyenek.  
 
 ```bash
 py varmegyek.py -api API_KEY
 ```
 
-
 Ez kettő fájlt fog legyártani, ezek példáit lásd [itt](#jelenlegi-adatok):
 - ``varmegyek-raw.json``: az összes település neve, **minden lekért információval**.
 - ``varmegyek.json``: az előbb lekért települések **vármegyék szerint** csoportosítva, ábécé sorrendben.
 
-
 Az Excel fájlt a program beépített JSON import funkciójával csináltam.
 
+### Tudnivalók
+- A lefutási ideje jelenleg kb. 1 óra
+
+- Google Maps API hibái:
+    - 26 települést nem talál meg, így ezek koordinátáit sem tudja lehívni
+    - Eperjes, Imola, Medina illetve Pula nevű települések koordinátái Magyarországon kívülre kerülnek, mert ezekre az első találat nem magyar település
+- azaz **30 olyan település van, aminek az adatai hiányozni fognak, vagy hibásak lesznek** (ezeknek a száma olyan kicsi, inkább kézzel javítottam, mintsem megoldást találjak rá)
+
+- a ``test`` mappába mellékeltem egy másik scriptet, ami lecsekkolja hány (biztosan) hibás település van, így ezeket kicsit könnyebben tudjátok javítani
+
 ## TODO
+- [x] hibás településinformációk javítása
 - [x] több adat lekérése
 - [ ] több adattároló típus alkalmazása -> Excel, SQL DB, stb.
 
