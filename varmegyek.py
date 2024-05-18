@@ -49,20 +49,20 @@ def getTownsFromPage(url):
 # this is the google maps api magic
 # gather data about each town and return it
 def getTownDetails(location):
+    # default values
+    latitude = 0;
+    longitude = 0;
     postal_code = '0'
     if (location in towns_set): postal_code = towns_dict[location];
     #return postal_code, 0, 0 # uncomment this to run without api call
     mapClient = googlemaps.Client(key=api_key)
     results = mapClient.places(location)
     if results['status'] == "OK":
-        # default values
-        latitude = 0;
-        longitude = 0;
         latitude = results['results'][0]['geometry']['location']['lat']
         longitude = results['results'][0]['geometry']['location']['lng']
-        return postal_code, latitude, longitude
-    else:
-        return postal_code, latitude, longitude
+        
+    return postal_code, latitude, longitude
+
 
 # eenie meenie miny moe
 parse = argparse.ArgumentParser();
