@@ -96,7 +96,7 @@ Az Excel fájlt a program beépített JSON import funkciójával csináltam.
 - [x] több adat lekérése
 - [ ] több adattároló típus alkalmazása -> Excel, SQL DB, stb.
 
-### Felhasznált források
+## Felhasznált források
 [TÚRABÁZIS.hu](https://www.turabazis.hu/telepules_lista_0_0_n_n_n_n_0_n_0_n_0_n_n_n_n_0): települések és hozzájuk tartozó vármegyék nevei  
 [Google Maps Places API](https://developers.google.com/maps/documentation/places/web-service): földrajzi szélesség és hosszúság  
 Magyar Posta [Magyarországi postai irányítószámok](https://www.posta.hu/static/internet/download/Iranyitoszam-Internet_uj.xlsx) dokumentuma  
