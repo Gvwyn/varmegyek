@@ -75,7 +75,7 @@ A Google Maps API egy bizonyos kvótával rendelkezik, ami átlépése után dí
 py varmegyek.py -api API_KEY
 ```
 
-Ez kettő fájlt fog legyártani, ezek példáit lásd [itt](#jelenlegi-adatok):
+Ez kettő fájlt fog legyártani, ezek példáit lásd [itt](#fájlok):
 - ``varmegyek-raw.json``: az összes település neve, **minden lekért információval**.
 - ``varmegyek.json``: az előbb lekért települések **vármegyék szerint** csoportosítva, ábécé sorrendben.
 
