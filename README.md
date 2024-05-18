@@ -6,7 +6,7 @@
 
 *A városnevek[^1], illetve irányítószámok pontosak (kell legyenek), a koordináták ritkán, de eltérhetnek a valóságtól.*
 
-## Jelenlegi adatok, példák
+## Jelenlegi adatok
 
 ``varmegyek-raw.json``: összes adat lekérve  
 
