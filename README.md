@@ -69,15 +69,19 @@ A Google Maps API egy bizonyos kvótával rendelkezik, ami átlépése után dí
 
 ### Program futtatása
 
+A lefutási ideje jelenleg kb. 1 óra.
+
 ``iranyito.txt`` és ``varmegyek.py`` 1 mappába kell legyenek.  
 
 ```bash
 py varmegyek.py -api API_KEY
 ```
 
+
 Ez kettő fájlt fog legyártani, ezek példáit lásd [itt](#jelenlegi-adatok):
 - ``varmegyek-raw.json``: az összes település neve, **minden lekért információval**.
-- ``varmegyek.json``: az előbb lekért települések **vármegyék szerint** csoportosítva.
+- ``varmegyek.json``: az előbb lekért települések **vármegyék szerint** csoportosítva, ábécé sorrendben.
+
 
 Az Excel fájlt a program beépített JSON import funkciójával csináltam.
 

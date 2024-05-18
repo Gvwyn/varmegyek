@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 api_key = ''
 
 pages = 158                         # number of pages as of 5/16/2024
-towns = 3179                        # total number of towns
+towns = 3155                        # total number of towns
 towns_checked = 0                   # incremented value for feedback
 
 outputfile = 'varmegyek-raw.json'   # output file
@@ -16,35 +16,32 @@ output = {}                         # output
 
 # parse the town names & their counties from the page
 def getTownsFromPage(url):
-        global towns, towns_checked
-        
-        response = requests.get(url)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            td_elements = soup.select('td.oszlopbal9vastag')
-            for td in td_elements:
-                town_name = td.text.strip()
-                towns_checked += 1;
+    global towns, towns_checked
+    response = requests.get(url)
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        td_elements = soup.select('td.oszlopbal9vastag')
+        for td in td_elements:
+            town_name = td.text.strip()
+            towns_checked += 1;
 
-                if "kerület" in town_name or "külföld" in town_name: 
-                    print(f'{towns_checked}/{towns} {towns_checked / towns * 100: .4f}%\t({town_name})')
-                    continue
+            if "kerület" in town_name or "külföld" in town_name: 
+                print(f'{towns_checked}/{towns} {towns_checked / towns * 100: .4f}%\t({town_name})')
+                continue
 
-                county_name = td.find_next_sibling('td', class_='oszlopkozep7').find_next_sibling('td', class_='oszlopkozep7').text.strip()
-                type_name = td.find_next_sibling('td', class_='oszlopkozep7').find_next_sibling('td', class_='oszlopkozep7').find_next_sibling('td', class_='oszlopkozep7').text.strip()
-                postal_code, latitude, longitude = getTownDetails(td.text.strip())
-                
-                output[town_name]= {
-                    'varmegye': county_name,
-                    'iranyitoszam': int(postal_code),
-                    'rang': type_name,
-                    'szelesseg': latitude,
-                    'hosszusag': longitude
-                }
-                print(f'{towns_checked}/{towns} {towns_checked / towns * 100: .4f}%\t{town_name}')
-        else:
-            print(f'Uh oh...\n{url} -> {response.status_code}')
-            exit()
+            county_name = td.find_next_sibling('td', class_='oszlopkozep7').find_next_sibling('td', class_='oszlopkozep7').text.strip()
+            type_name = td.find_next_sibling('td', class_='oszlopkozep7').find_next_sibling('td', class_='oszlopkozep7').find_next_sibling('td', class_='oszlopkozep7').text.strip()
+            postal_code, latitude, longitude = getTownDetails(td.text.strip())
+            
+            output[town_name]= {
+                'varmegye': county_name,
+                'iranyitoszam': int(postal_code),
+                'rang': type_name,
+                'szelesseg': latitude,
+                'hosszusag': longitude
+            }
+            print(f'{towns_checked}/{towns} {towns_checked / towns * 100: .4f}%\t{town_name}')
+    else: print(f'Uh oh...\n{url} -> {response.status_code}')
 
 # this is the google maps api magic
 # gather data about each town and return it
@@ -69,13 +66,13 @@ parse = argparse.ArgumentParser();
 parse.add_argument('-api', dest='api_key', metavar='API_KEY', type=str, required=False, help='Google Maps API Key')
 args = parse.parse_args()
 
-# only use the passed argument API key if it wasnt defined before
+# only use the passed arg API key if it wasnt defined before
 if api_key == '':
     api_key = args.api_key
     try:
         googlemaps.Client(key=api_key)
     except googlemaps.exceptions.ApiError:
-        raise SystemError('Invalid API Key.')
+        raise SystemError('Helytelen API kulcs.')
 
 start = time.time()
 
@@ -121,4 +118,4 @@ with open(outputfile, 'w', encoding='utf-8') as json_file:
 with open(sortedfile, 'w', encoding='utf-8') as json_file:
     json.dump(sorted_output, json_file, indent=4, ensure_ascii=False)
 
-print(f'\n\nLefutott. {(end - start ): .2f} másodperc\nFájlok: {outputfile}, {sortedfile}')
+print(f'\n\nLefutott. {(end - start): .2f} másodperc\nFájlok: {outputfile}, {sortedfile}')
