@@ -62,7 +62,7 @@ def getTownDetails(location):
         longitude = results['results'][0]['geometry']['location']['lng']
         return postal_code, latitude, longitude
     else:
-        return 0, 0, 0
+        return postal_code, latitude, longitude
 
 # eenie meenie miny moe
 parse = argparse.ArgumentParser();
