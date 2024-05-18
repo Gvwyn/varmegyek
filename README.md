@@ -6,7 +6,7 @@
 
 *A városnevek[^1], illetve irányítószámok pontosak (kell legyenek), a koordináták ritkán, de eltérhetnek a valóságtól.*
 
-## Jelenlegi adatok
+## Jelenlegi adatok, példák
 
 ``varmegyek-raw.json``: összes adat lekérve  
 
@@ -15,8 +15,8 @@
     "varmegye": "Győr-Moson-Sopron",
     "iranyitoszam": 9167,
     "rang": "nagyközség",
-    "szelesseg": 17.2507143
-    "hosszusag": 47.6881947,
+    "szelesseg": 47.6881947,
+    "hosszusag": 17.2507143
 },
 ``` 
 
@@ -43,7 +43,7 @@
 
 ---
 
-Emellett az adatok elérhetőek **Excel** formátumban is a könnyű böngészés érdekében.
+Emellett az adatok elérhetőek **Excel** táblázatban is a könnyű böngészés érdekében.
 
 ## Futtatás
 
